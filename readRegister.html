@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read Register</title>
+    <script type="text/javascript">
+
+                var shell = new ActiveXObject("WScript.Shell");
+
+                // 读取注册表
+                var key = shell.RegRead("HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment");
+                alter(key)
+
+//        function exec() {
+//            var command;
+//            var shell = new ActiveXObject("WScript.Shell");
+//            command = shell.RegRead("HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment");//从注册表获得软件安装路径
+//            alert(command);
+//            command = command + "IM.exe";
+//            window.oldOnError = window.onerror;
+//            window._command = command;
+//            window.onerror = function (err) {
+//                if (err.indexOf('utomation') != -1) {
+//                    alert('命令' + window._command + ' 已经被用户禁止！');
+//                    return true;
+//                }
+//                else return false;
+//            };
+//            var wsh = new ActiveXObject('WScript.Shell');
+//            if (wsh)
+//                wsh.Run("\"" + command); //解决目录包含空格问题
+//            window.onerror = window.oldOnError;
+//        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
